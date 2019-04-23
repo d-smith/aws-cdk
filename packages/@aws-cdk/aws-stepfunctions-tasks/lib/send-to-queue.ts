@@ -1,7 +1,7 @@
 import iam = require('@aws-cdk/aws-iam');
+import sqs = require('@aws-cdk/aws-sqs');
 import stepfunctions = require('@aws-cdk/aws-stepfunctions');
 import cdk = require('@aws-cdk/cdk');
-import { IQueue } from './queue-ref';
 
 /**
  * Properties for SendMessageTask
@@ -10,7 +10,7 @@ export interface SendMessageTaskProps extends stepfunctions.BasicTaskProps {
   /**
    * The topic to send a message to to
    */
-  queue: IQueue;
+  queue: sqs.IQueue;
 
   /**
    * The message body to send to the queue.

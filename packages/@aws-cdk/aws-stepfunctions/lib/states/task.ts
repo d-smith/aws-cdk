@@ -66,7 +66,7 @@ export interface TaskProps extends BasicTaskProps {
      *
      * Can be either a Lambda Function or an Activity.
      */
-    resource: IStepFunctionsTaskResource;
+    readonly resource: IStepFunctionsTaskResource;
 
     /**
      * Parameters pass a collection of key-value pairs, either static values or JSONPath expressions that select from the input.
@@ -80,7 +80,7 @@ export interface TaskProps extends BasicTaskProps {
      *
      * @default No parameters
      */
-    parameters?: { [name: string]: any };
+    readonly parameters?: { [name: string]: any };
 
     /**
      * Maximum time between heart beats

@@ -1,5 +1,5 @@
 import cloudwatch = require('@aws-cdk/aws-cloudwatch');
-import { Construct, Resource } from '@aws-cdk/cdk';
+import { Construct, IResource, Resource } from '@aws-cdk/cdk';
 import { IStepFunctionsTaskResource, StepFunctionsTaskResourceProps, Task } from './states/task';
 import { CfnActivity } from './stepfunctions.generated';
 
@@ -145,7 +145,7 @@ export class Activity extends Resource implements IActivity, IStepFunctionsTaskR
     }
 }
 
-export interface IActivity extends cdk.IConstruct, IStepFunctionsTaskResource {
+export interface IActivity extends IResource, IStepFunctionsTaskResource {
     /**
      * The ARN of the activity
      */

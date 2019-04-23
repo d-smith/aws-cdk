@@ -1,7 +1,7 @@
 import iam = require('@aws-cdk/aws-iam');
+import sns = require('@aws-cdk/aws-sns');
 import stepfunctions = require('@aws-cdk/aws-stepfunctions');
 import cdk = require('@aws-cdk/cdk');
-import { ITopic } from './topic-ref';
 
 /**
  * Properties for PublishTask
@@ -10,7 +10,7 @@ export interface PublishTaskProps extends stepfunctions.BasicTaskProps {
   /**
    * The topic to publish to
    */
-  topic: ITopic;
+  topic: sns.ITopic;
 
   /**
    * The text message to send to the queue.

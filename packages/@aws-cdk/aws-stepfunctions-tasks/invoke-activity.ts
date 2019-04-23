@@ -9,7 +9,7 @@ export interface ActivityTaskProps extends BasicTaskProps {
   /**
    * The function to run
    */
-  activity: IActivity;
+  readonly activity: IActivity;
 
   /**
    * Maximum time between heart beats
@@ -20,7 +20,7 @@ export interface ActivityTaskProps extends BasicTaskProps {
    *
    * @default No heart beat timeout
    */
-  heartbeatSeconds?: number;
+  readonly heartbeatSeconds?: number;
 }
 
 /**

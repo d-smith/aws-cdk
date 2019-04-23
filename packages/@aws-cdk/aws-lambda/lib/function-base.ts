@@ -3,7 +3,6 @@ import ec2 = require('@aws-cdk/aws-ec2');
 import iam = require('@aws-cdk/aws-iam');
 import logs = require('@aws-cdk/aws-logs');
 import s3n = require('@aws-cdk/aws-s3-notifications');
-import stepfunctions = require('@aws-cdk/aws-stepfunctions');
 import cdk = require('@aws-cdk/cdk');
 import { IResource, Resource } from '@aws-cdk/cdk';
 import { IEventSource } from './event-source';

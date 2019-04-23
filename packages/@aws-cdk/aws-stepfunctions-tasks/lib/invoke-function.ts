@@ -1,6 +1,6 @@
+import lambda = require('@aws-cdk/aws-lambda');
 import stepfunctions = require('@aws-cdk/aws-stepfunctions');
 import cdk = require('@aws-cdk/cdk');
-import { IFunction } from './lambda-ref';
 
 /**
  * Properties for FunctionTask
@@ -9,7 +9,7 @@ export interface FunctionTaskProps extends stepfunctions.BasicTaskProps {
   /**
    * The function to run
    */
-  function: IFunction;
+  function: lambda.IFunction;
 }
 
 /**
